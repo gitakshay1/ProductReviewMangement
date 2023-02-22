@@ -33,7 +33,8 @@
             //linqOperations.PrintTopThreeRecords(listProductReview);
             //linqOperations.GetRecordsRatingsGreaterThanThree(listProductReview);
             //linqOperations.GetCountOfProductId(listProductReview);
-            linqOperations.RetriveProductId(listProductReview);
+            //linqOperations.RetriveProductId(listProductReview);
+            linqOperations.SkipTop5Records(listProductReview);
         }
     }
 }
