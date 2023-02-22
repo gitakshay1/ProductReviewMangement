@@ -24,5 +24,12 @@ namespace ProductReviewMangement
             var result =listProductReview.OrderByDescending(x => x.Rating).Take(3).ToList();
             ProductPrint(result);
         }
+        public void GetRecordsRatingsGreaterThanThree(List<ProductReview> listProductReview)
+        {
+            //fetch record whose rating greater than three and product id 1,4,9
+            Console.WriteLine("Print record whose rating > 3 and product id are 1,4,9");
+            var result = listProductReview.Where(x => x.Rating > 3 && (x.ProductId == 1 || x.ProductId == 4 || x.ProductId ==9)).ToList();
+            ProductPrint(result);
+        }
     }
 }
