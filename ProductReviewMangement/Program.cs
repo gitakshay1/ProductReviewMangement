@@ -31,7 +31,8 @@
             LinqOperations linqOperations = new LinqOperations();
             //linqOperations.ProductPrint(listProductReview);
             //linqOperations.PrintTopThreeRecords(listProductReview);
-            linqOperations.GetRecordsRatingsGreaterThanThree(listProductReview);
+            //linqOperations.GetRecordsRatingsGreaterThanThree(listProductReview);
+            linqOperations.GetCountOfProductId(listProductReview);
         }
     }
 }

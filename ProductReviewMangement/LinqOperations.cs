@@ -31,5 +31,14 @@ namespace ProductReviewMangement
             var result = listProductReview.Where(x => x.Rating > 3 && (x.ProductId == 1 || x.ProductId == 4 || x.ProductId ==9)).ToList();
             ProductPrint(result);
         }
+        public void GetCountOfProductId(List<ProductReview> listProductReview)
+        {
+            //Retrieve count of review present for each productID
+            var result = listProductReview.GroupBy(x => x.ProductId).ToList();
+            foreach( var productReview in result)
+            {
+                Console.WriteLine($"ProductId = {productReview.Key}, count of product = {productReview.Count()}");
+            }
+        }
     }
 }
