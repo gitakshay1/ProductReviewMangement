@@ -40,5 +40,14 @@ namespace ProductReviewMangement
                 Console.WriteLine($"ProductId = {productReview.Key}, count of product = {productReview.Count()}");
             }
         }
+        public void RetriveProductId(List<ProductReview> listProductReview)
+        {
+            // Retrieve only productId and review from the list for a records.
+            var Result = listProductReview.Select(x => x.ProductId).ToList();
+            foreach (var ProductReview in Result)
+            {
+                Console.WriteLine(ProductReview);
+            }
+        }
     }
 }
