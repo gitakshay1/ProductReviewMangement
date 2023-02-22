@@ -29,7 +29,8 @@
             new ProductReview() { ProductId = 21, UserId = 7, Rating = 4, Review = "Nice", isLike = true },
             };
             LinqOperations linqOperations = new LinqOperations();
-            linqOperations.ProductPrint(listProductReview);
+            //linqOperations.ProductPrint(listProductReview);
+            linqOperations.PrintTopThreeRecords(listProductReview);
         }
     }
 }
